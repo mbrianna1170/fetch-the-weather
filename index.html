@@ -1,48 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel='stylesheet' href="./assets/style.css">
+
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <span class="navbar-text">
-            Weather Dashboard
-          </span>
-        </div>
-      </nav>
-      <div class="columns">
-    <!--Search with Search History-->      
-        <div class="column is-one-third">
-            <div class="field">
-                <label class="label">Search for a City:</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="City">
-                </div>
-                <div class="field">
-                <p class="control">
-                <button class="button is-link"> Search </button>
-                </p>    
-                </div>
-              </div> 
-        </div>
-    <!--Weather of City & Forecast-->    
-        <div class="column">
-            <section class="section">
-                <h1 class="title is-spaced">City Name</h1>
-                <h2 class="subtitle">
-                  <strong>Temp:</strong><br>
-                  <strong>Wind:</strong><br>
-                  <strong>Humidity:</strong><br>
-                  <strong>UV Index:</strong>
-                </h2>
-              </section>
-        </div>
+  <div class="header">
+    Weather Dashboard
+  </div>
+
+  <div class="columns">
+    <!--search bar and recent searches appear here-->
+    <div class="column is-one-quarter" id="columnOne">
+      <h1>Search For a City:</h1>
+    </div>
+    <!--weather appears on this side-->
+    <div class="column">
+      <div class="boxed">
+        <h1>Dallas</h1> (Date) (Icon)
+        <br>
+        Temp:
+        <br>
+        Wind:
+        <br>
+        Humidity:
+        <br>
+        UV Index: 
       </div>
-</body>
+      <!--Weather Forecast Goes Here-->
+<section class="section-is-medium" id="weeklyforecast">
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">One</p>
+      <p class="subtitle">Subtitle</p>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">Two</p>
+      <p class="subtitle">Subtitle</p>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">Three</p>
+      <p class="subtitle">Subtitle</p>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">Four</p>
+      <p class="subtitle">Subtitle</p>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">Five</p>
+      <p class="subtitle">Subtitle</p>
+    </article>
+  </div>
+  </div>
+  </section>
+    </div>
+  </div>
+
+
+
+</body> 
 </html>
+
+<script src="./assets/script.js"></script>

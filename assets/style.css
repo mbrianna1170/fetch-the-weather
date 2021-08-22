@@ -11,6 +11,11 @@
       font-size: xx-large;
   }
 
+  /* left column with search bar */
+  div#columnOne {
+    padding: 25px;
+}
+
   /* weather dashboard inside box */
   #colunmOne {
       padding: 20px;

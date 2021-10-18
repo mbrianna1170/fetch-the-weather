@@ -11,5 +11,6 @@ Currently unable to fetch with the API - still in progress.
 - CSS and Bulma
 - JavaScript
 
-## Deployed Links:
+## Deployed Link: 
+https://mbrianna1170.github.io/weather-dashboard/
 

@@ -1,6 +1,6 @@
 # Weather Dashboard ☀️ 
 
-Using [Open Weather](https://openweathermap.org/) API documentation this application allows you to search the weather forecast by city.
+Using [Open Weather](https://openweathermap.org/) API documentation this application allows you to check the weather forecast when searching by city.
 
 ## Issues 
 Currently unable to fetch with the API - still in progress. 

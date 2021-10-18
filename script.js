@@ -1,16 +1,21 @@
+// API variables
+const apiURL = 'pro.openweathermap.org';
+const apiKey = "dd12231eebcfc81237b12aa64539d58d";
+// DOM elements
 const userFormEl = document.querySelector("#user-form");
 const nameInputEl = document.querySelector("#city");
-let cityName = nameInputEl;
 
 const getWeather = function (cityName) {
-  const apiKey = c81c7ac769bd1a125a52b9f8cd1cdfa0;
-  fetch(
-    "api.openweathermap.org/data/2.5/weather?q=" +cityName +"&appid=" +apiKey
-  ).then(function (response) {
-    response.json().then(function (data) {
-      console.log(data);
+  fetch(`${apiURL}/data/2.5/forecast/hourly?q=${cityName}&appid=${apiKey}`)
+    .then(function (response) {
+      if (response.ok) {
+        response.json().then(function (data) {
+          displayWeather(data, city);
+        });
+      } else {
+        alert("Error: City Not Found")
+      }
     });
-  });
 };
 
 const formSumbitHandler = function (event) {

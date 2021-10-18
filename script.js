@@ -2,11 +2,16 @@
 const apiURL = 'pro.openweathermap.org';
 const apiKey = "dd12231eebcfc81237b12aa64539d58d";
 // DOM elements
-const userFormEl = document.querySelector("#user-form");
-const nameInputEl = document.querySelector("#city");
+let searchFormEl = document.querySelector("#search-form");
+let cityInputEl = document.querySelector("#city-input");
+let cityNameEl = document.querySelector("#city-name");
+let cityName = cityNameEl;
+// Other
+let searchHistoryArray = [];
 
-const getWeather = function (cityName) {
-  fetch(`${apiURL}/data/2.5/forecast/hourly?q=${cityName}&appid=${apiKey}`)
+// fetch api getWeather(); 
+const getWeather = function (city) {
+  fetch(`${apiURL}/data/2.5/forecast/hourly?q=${cityName}n&appid=${apiKey}`)
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
@@ -18,14 +23,24 @@ const getWeather = function (cityName) {
     });
 };
 
+// displayWeather();
+const displayWeather = function (data) {
+  cityNameEl.textContent = "Showing weather for " + data.list[0].name;
+}
+
+// Form Sumbit Handler
 const formSumbitHandler = function (event) {
   event.preventDefault();
-  console.log(event);
-  const cityName = nameInputEl.value.trim();
+  const cityName = cityInputEl.value.trim();
   if (cityName) {
     getWeather(cityName);
+    searchHistoryArray.unshift(cityName);
+    localStorage.setItem("city", JSON.stringify(searchHistoryArray));
+    createButton();
+    cityInputEl.value = "";
   } else {
-    alert("Please enter a city!");
+    alert("Please enter a valid city.");
   }
 };
-userFormEl.addEventListener("sumbit", formSumbitHandler);
+
+searchFormEl.addEventListener("sumbit", formSumbitHandler);

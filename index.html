@@ -20,8 +20,8 @@
     <!--search bar and recent searches appear here-->
     <div class="column is-one-quarter" id="columnOne">
       <h1>Search For a City:</h1>
-      <form class="example" id="user-form" action="action_page.php">
-        <input type="text" placeholder="Search.." id="City" name="search">
+      <form class="example" id="search-form" action="action_page.php">
+        <input type="text" placeholder="Search.." id="city-input" name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
       <hr>
@@ -29,7 +29,7 @@
     <!--weather appears on this side-->
     <div class="column">
       <div class="boxed">
-        <h1>Dallas</h1> (Date) (Icon)
+        <h1 id="city-name"></h1>
         <br>
         Temp:
         <br>

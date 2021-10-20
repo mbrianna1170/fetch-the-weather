@@ -1,7 +1,10 @@
 * {
   box-sizing: border-box;
-  padding: 0;
+}
+
+body {
   margin: 0;
+  padding: 0;
 }
 
 header {
@@ -14,7 +17,7 @@ header {
 }
 
 main {
-  margin: 5px auto;
+  margin: 2rem auto;
   width: 95%;
 }
 
@@ -26,7 +29,7 @@ h3 {
 /*** Search Form ***/
 
 .card {
-  max-width: 60%;
+  width: 90%;
 }
 
 /* Search By City */
@@ -36,6 +39,7 @@ h3.card-header.text-uppercase {
 
 form#search-form {
   padding: 20px;
+  text-align: center;
 }
 
 /* "City" */
@@ -46,18 +50,19 @@ label.form-label {
 
 input#city {
   border-radius: 12px;
-  border: solid 2px #262953b0;
+  border: solid 4px #8989ff;
   padding: 2px;
 }
 
 .btn {
   border: none;
   border-radius: 12px;
-  font-style: 18px;
-  padding: 6px;
+  font-size: 16px;
   background-color: #4d57e2;
   color: white;
   font-weight: 500;
+  margin-top: .25rem;
+  padding: .25rem;
 }
 
 .btn:hover {
@@ -67,46 +72,27 @@ input#city {
 
 /* Weather Container */
 .col-12.col-md-8 {
-  padding: 50px;
+  padding: 20px;
+  border: solid 3px #4d57e2;
+  width: 80%;
 }
 
 h2.subtitle {
   font-size: 30px;
   font-weight: 600;
+  text-align: center;
+}
+
+h4.card-title {
+  padding: 1rem;
+}
+
+.card#weather-card {
+  width: 250px;
+  height: 250px;
 }
 
 /* Flex Content */
 .flex-row {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.justify-flex-start {
-  justify-content: flex-start;
-}
-
-.justify-flex-end {
-  justify-content: flex-end;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.align-stretch {
-  align-items: stretch;
-}
-
-.align-end {
-  align-items: flex-end;
-}
-
-.align-center {
-  align-items: center;
 }

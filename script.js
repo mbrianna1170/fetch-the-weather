@@ -1,8 +1,12 @@
-// variables
-var cityFormEl = document.querySelector("#city-form");
+// For Search Form
+var searchformEl = document.querySelector("#search-form");
 var cityInputEl = document.querySelector("#city");
+// For Weather Container
 var weatherContainerEl = document.querySelector("#weather-container");
-var weatherData = document.querySelector("#weather-data")
+var cityName = document.querySelector("#city-name");
+var cityTemperature = document.querySelector("#temperature");
+var cityWind = document.querySelector("#wind");
+var cityHumidity = document.querySelector("#humidity");
 
 
 // Fetch Weather Information
@@ -37,8 +41,11 @@ var formSubmitHandler = function (event) {
 var displayWeather = function (data) {
   console.log(data)
   // clear old content
-  weatherContainerEl.textContent = "";
-  weatherData.textContent = data.list[0].name;
+  // weatherContainerEl.textContent = "";
+  cityName.textContent = data.list[0].name;
+  cityTemperature.textContent = data.list[0].main.temp + "\xB0" + "F";
+  cityWind.textContent = data.list[0].wind.speed + " MPH";
+  cityHumidity.textContent = data.list[0].main.humidity + "%";
 }
 
-cityFormEl.addEventListener("submit", formSubmitHandler);
+searchformEl.addEventListener("submit", formSubmitHandler);

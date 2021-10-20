@@ -31,11 +31,11 @@ h3 {
 
 /* Search By City */
 h3.card-header.text-uppercase {
-  padding: 10px;
+  padding: 20px;
 }
 
-form#city-form {
-  padding: 10px;
+form#search-form {
+  padding: 20px;
 }
 
 /* "City" */

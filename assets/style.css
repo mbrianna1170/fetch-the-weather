@@ -5,11 +5,53 @@
 }
 
 header {
-    padding: 30px;
-    text-align: center;
-    background: #4d57e2;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-  }
+  padding: 30px;
+  text-align: center;
+  background: #4d57e2;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
 
+main {
+  margin: 5px auto;
+  width: 95%;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/*** Search Form ***/
+
+/* Search By City */
+h3.card-header.text-uppercase {
+  padding: 10px;
+}
+
+form#city-form {
+  padding: 10px;
+}
+
+/* "City" */
+label.form-label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input#city {
+  border-radius: 12px;
+  border: solid 2px #262953b0;
+  padding: 2px;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  font-style: 18px;
+  padding: 6px;
+  background-color: #262953b0;
+  color: white;
+  font-weight: bold;
+}

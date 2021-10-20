@@ -10,10 +10,12 @@ body {
 header {
   padding: 30px;
   text-align: center;
-  background: #4d57e2;
+  background: linear-gradient(
+    45deg, #4d57e2, #8989ff);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
+  font-weight: 700;
 }
 
 main {
@@ -50,7 +52,7 @@ label.form-label {
 
 input#city {
   border-radius: 12px;
-  border: solid 4px #8989ff;
+  border: solid 4px #acadb5;
   padding: 2px;
 }
 

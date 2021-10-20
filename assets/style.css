@@ -1,32 +1,15 @@
-.header {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
     padding: 30px;
     text-align: center;
     background: #4d57e2;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 40px;
   }
 
-  h1 {
-      font-size: xx-large;
-  }
-
-  /* left column with search bar */
-  div#columnOne {
-    padding: 25px;
-}
-
-  /* weather dashboard inside box */
-  #colunmOne {
-      padding: 20px;
-  }
-
-  /* five day forecast */
-  #weeklyforecast {
-      display: flex;
-  }
-
-  .boxed {
-    padding: 20px;
-    border: 1px solid rgb(0, 0, 0);
-  }

@@ -79,6 +79,14 @@ input#city {
   width: 80%;
 }
 
+div#weather-container {
+  padding: 2rem;
+}
+
+.title {
+  font-size: 20px;
+}
+
 h2.subtitle {
   font-size: 30px;
   font-weight: 600;

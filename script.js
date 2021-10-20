@@ -10,21 +10,26 @@ var cityHumidity = document.querySelector("#humidity");
 var currentDate = document.querySelector("#current-date");
 // For Weather Card
 var weatherCardEl = document.querySelector("#weather-card");
-var temperatureOne = document.querySelector("#temp1")
-var temperatureTwo = document.querySelector("#temp2")
-var temperatureThree = document.querySelector("#temp3")
-var temperatureFour = document.querySelector("#temp4")
+var temperatureOne = document.querySelector("#temp1");
+var temperatureTwo = document.querySelector("#temp2");
+var temperatureThree = document.querySelector("#temp3");
+var temperatureFour = document.querySelector("#temp4");
 
 var windOne = document.querySelector("#wind1");
 var windTwo = document.querySelector("#wind2");
 var windThree = document.querySelector("#wind3");
 var windFour = document.querySelector("#wind4");
 
-var humidityOne = document.querySelector("#humidity1")
-var humidityTwo = document.querySelector("#humidity2")
-var humidityThree = document.querySelector("#humidity3")
-var humidityFour = document.querySelector("#humidity4")
+var humidityOne = document.querySelector("#humidity1");
+var humidityTwo = document.querySelector("#humidity2");
+var humidityThree = document.querySelector("#humidity3");
+var humidityFour = document.querySelector("#humidity4");
 
+// For Dates
+let displayDate = document.querySelector("#date1");
+let displayDate2 = document.querySelector("#date2");
+let displayDate3 = document.querySelector("#date3");
+let displayDate4 = document.querySelector("#date4");
 
 // Fetch Weather Information
 var getWeather = function (city) {
@@ -67,6 +72,10 @@ var displayWeather = function (data) {
   // display date
   var today = moment().format("MM/DD/YY");
   currentDate.textContent = today;
+  displayDate.textContent = moment().add(1, "day").format("l");
+  displayDate2.textContent = moment().add(2, "day").format("l");
+  displayDate3.textContent = moment().add(3, "day").format("l");
+  displayDate4.textContent = moment().add(4, "day").format("l");
   // 4 remaining days temp
   temperatureOne.textContent = data.list[1].main.temp + "\xB0" + "F";
   temperatureTwo.textContent = data.list[2].main.temp + "\xB0" + "F";
@@ -77,7 +86,7 @@ var displayWeather = function (data) {
   windTwo.textContent = data.list[2].wind.speed + " MPH";
   windThree.textContent = data.list[3].wind.speed + " MPH";
   windFour.textContent = data.list[4].wind.speed + " MPH";
-  // 4 remaining days humidity 
+  // 4 remaining days humidity
   humidityOne.textContent = data.list[0].main.humidity + "%";
   humidityTwo.textContent = data.list[0].main.humidity + "%";
   humidityThree.textContent = data.list[0].main.humidity + "%";

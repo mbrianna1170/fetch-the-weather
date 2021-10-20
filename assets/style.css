@@ -11,7 +11,7 @@ header {
   padding: 60px;
   text-align: center;
   background: linear-gradient(
-    45deg, #4d57e2, #8989ff);
+    45deg, #414ce7, #8989ff);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
@@ -65,7 +65,7 @@ input#city {
   border: none;
   border-radius: 12px;
   font-size: 16px;
-  background-color: #4d57e2;
+  background-color: #414ce7;
   color: white;
   font-weight: 500;
   margin-top: .25rem;
@@ -80,7 +80,7 @@ input#city {
 /* Weather Container */
 .col-12.col-md-8 {
   padding: 20px;
-  border: solid 3px #4d57e2;
+  border: solid 3px #414ce7;
   width: 80%;
 }
 
@@ -100,11 +100,13 @@ h2.subtitle {
 
 h4.title {
   font-size: 25px;
+  padding: 1rem;
 }
 
 h4.card-title {
   padding: 1rem;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .card#weather-card {
@@ -113,6 +115,9 @@ h4.card-title {
   display: inline-flex;
   flex-direction: column;
   margin: 1rem;
+  background-color: #bbbbbe;
+  border: solid 4px #000;
+  color: #000;
 }
 
 /* Footer */

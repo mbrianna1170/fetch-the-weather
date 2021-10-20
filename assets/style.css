@@ -25,6 +25,10 @@ h3 {
 
 /*** Search Form ***/
 
+.card {
+  max-width: 60%;
+}
+
 /* Search By City */
 h3.card-header.text-uppercase {
   padding: 10px;
@@ -37,7 +41,7 @@ form#city-form {
 /* "City" */
 label.form-label {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 input#city {
@@ -51,7 +55,58 @@ input#city {
   border-radius: 12px;
   font-style: 18px;
   padding: 6px;
-  background-color: #262953b0;
+  background-color: #4d57e2;
   color: white;
-  font-weight: bold;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #8989ff;
+  box-shadow: 2px 2px #000;
+}
+
+/* Weather Container */
+.col-12.col-md-8 {
+  padding: 50px;
+}
+
+h2.subtitle {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* Flex Content */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.justify-flex-start {
+  justify-content: flex-start;
+}
+
+.justify-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
 }
